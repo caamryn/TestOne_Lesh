@@ -2,17 +2,245 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/price_ET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/PriceLabel"
+        app:layout_constraintStart_toStartOf="@+id/ultimate_ET"
+        app:layout_constraintTop_toTopOf="@+id/PriceLabel" />
+
+    <EditText
+        android:id="@+id/number_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/NumberLabel"
+        app:layout_constraintStart_toStartOf="@+id/name_ET"
+        app:layout_constraintTop_toTopOf="@+id/NumberLabel" />
+
+    <EditText
+        android:id="@+id/type_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/TypeLable"
+        app:layout_constraintStart_toStartOf="@+id/number_ET"
+        app:layout_constraintTop_toTopOf="@+id/TypeLable" />
+
+    <EditText
+        android:id="@+id/fandom_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/FanLabel"
+        app:layout_constraintStart_toStartOf="@+id/type_ET"
+        app:layout_constraintTop_toTopOf="@+id/FanLabel" />
+
+    <EditText
+        android:id="@+id/on_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/OnLabel"
+        app:layout_constraintStart_toStartOf="@+id/fandom_ET"
+        app:layout_constraintTop_toTopOf="@+id/OnLabel" />
+
+    <EditText
+        android:id="@+id/ultimate_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/UltimateLabel"
+        app:layout_constraintStart_toStartOf="@+id/on_ET"
+        app:layout_constraintTop_toTopOf="@+id/UltimateLabel" />
+
+    <TextView
+        android:id="@+id/NumberLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:text="Number"
+        app:layout_constraintStart_toStartOf="@+id/NameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/NameLabel" />
+
+    <TextView
+        android:id="@+id/TypeLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="Type"
+        app:layout_constraintStart_toStartOf="@+id/NumberLabel"
+        app:layout_constraintTop_toBottomOf="@+id/NumberLabel" />
+
+    <TextView
+        android:id="@+id/OnLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="On"
+        app:layout_constraintStart_toStartOf="@+id/FanLabel"
+        app:layout_constraintTop_toBottomOf="@+id/FanLabel" />
+
+    <TextView
+        android:id="@+id/UltimateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Ultimate"
+        app:layout_constraintStart_toStartOf="@+id/OnLabel"
+        app:layout_constraintTop_toBottomOf="@+id/OnLabel" />
+
+    <TextView
+        android:id="@+id/PriceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Price"
+        app:layout_constraintStart_toStartOf="@+id/UltimateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/UltimateLabel" />
+
+    <TextView
+        android:id="@+id/FanLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="Fandom"
+        app:layout_constraintStart_toStartOf="@+id/TypeLable"
+        app:layout_constraintTop_toBottomOf="@+id/TypeLable" />
+
+    <Button
+        android:id="@+id/insertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/insert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_ET" />
+
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/update"
+        app:layout_constraintStart_toEndOf="@+id/insertButton"
+        app:layout_constraintTop_toBottomOf="@+id/price_ET" />
+
+    <Button
+        android:id="@+id/queryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/query"
+        app:layout_constraintStart_toStartOf="@+id/insertButton"
+        app:layout_constraintTop_toBottomOf="@+id/insertButton" />
+
+    <Button
+        android:id="@+id/previousButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="592dp"
+        android:text="@string/previous"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/previousButton" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/delete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/queryButton" />
+
+    <EditText
+        android:id="@+id/name_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="126dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/NameLabel"
+        app:layout_constraintStart_toEndOf="@+id/NameLabel"
+        app:layout_constraintTop_toTopOf="@+id/NameLabel" />
+
+    <TextView
+        android:id="@+id/unique_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintBottom_toBottomOf="@+id/previousButton"
+        app:layout_constraintStart_toEndOf="@+id/previousButton"
+        app:layout_constraintTop_toTopOf="@+id/previousButton"
+        app:layout_constraintVertical_bias="0.388" />
+
+    <TextView
+        android:id="@+id/separator"
+        android:layout_width="6dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/dashLabel"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintStart_toEndOf="@+id/unique_id"
+        app:layout_constraintTop_toBottomOf="@+id/queryButton" />
+
+    <TextView
+        android:id="@+id/fnameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintBaseline_toBaselineOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/separator" />
+
+    <TextView
+        android:id="@+id/lnameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintBaseline_toBaselineOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/fnameTextView" />
+
+    <TextView
+        android:id="@+id/NameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="101dp"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
