@@ -156,12 +156,6 @@ public class MainActivity extends AppCompatActivity {
         previousButton.setOnClickListener(previousListener);
         nextButton.setOnClickListener(nextListener);
 
-        if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_PHONE_STATE)
-                != PackageManager.PERMISSION_GRANTED){
-
-            String[] permission = new String[]{Manifest.permission.READ_PHONE_STATE};
-            ActivityCompat.requestPermissions(this, permission,101);
-        }
     }
 
     private void setViews() {
